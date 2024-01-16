@@ -1,0 +1,136 @@
+.container {
+  
+     max-width: 1528px; 
+     margin: auto; 
+    background-color: #ddf2e3;
+}
+.menu {display: block;}
+
+
+
+
+.obshie  {
+   
+    background-color: #f1f0a7;
+    text-align: center;
+    font-size: x-large;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    border-style: double;
+    border-color: #ac0f0f; 
+    margin: 0%;
+}    
+.titul {
+    font-style: bold;
+    font-size: large;
+    text-align: center;
+}
+img {
+    margin: auto;
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+    font-style: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+h3 {
+    font-style: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;  
+}
+h4 {
+
+    font-style: bold;
+    font-size: 20pt;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;  
+}
+.vinetki {
+    background-color: #f1f0a7;
+    text-align: center;
+    font-size: x-large;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    border-style: double;
+    border-color: #ac0f0f; 
+   
+}
+
+
+
+
+
+
+input {
+    min-width: 100px;
+  font-family: inherit;
+  appearance: none;
+  border: 0;
+  border-radius: 5px;
+  background: hsl(171, 20%, 55%);
+  color: #fff;
+  padding: 8px 16px;
+  font-size: 2cqi;
+  cursor: pointer;
+ 
+  margin-right: 10px;
+}
+.colaji {
+    background-color: #f1f0a7;
+    text-align: center;
+    font-size: x-large;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    border-style: double;
+    border-color: #ac0f0f;  
+}
+.portreti {
+    background-color: #f1f0a7;
+    text-align: center;
+    font-size: x-large;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    border-style: double;
+    border-color: #ac0f0f;     
+}
+.foto {
+    max-width: 1528px;
+    margin: auto;
+ 
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.center{
+    max-width: 1528px;
+    margin: auto;
+ 
+   display: flex;
+   align-items: center;
+   justify-content: center;  
+}
+
+
+
+@media (max-width: 991px) {
+    input {
+        min-width: 100px;
+      font-family: inherit;
+      appearance: none;
+      border: 0;
+      border-radius: 5px;
+      background: hsl(171, 20%, 55%);
+      color: #fff;
+      padding: 15px 20px;
+      font-size: 50px;
+      cursor: pointer;
+    } 
+}
+
+@media (max-width: 600px) {
+    .container {display: none;
+        max-width: 375px; 
+    }
+    
+}

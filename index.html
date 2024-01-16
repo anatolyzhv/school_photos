@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>school from 100</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1">-->
+    <title>Школьные фотографии</title>
+</head>
+<script type="text/javascript">
+    var locations = new Array("group_01.jpg", "group_02.jpg", "group_03.jpg");
+    var locaut = new Array("group_4.jpg", "group_5.jpg", "group_6.jpg", "group_7.jpg", "group_8.jpg");
+    var locauts = new Array("group_k1.jpg", "group_k2.jpg", "group_k3.jpg", "group_k4.jpg");
+    var locati = new Array("group_f1.jpg", "group_f2.jpg", "group_f3.jpg", "group_f4.jpg", "group_f5.jpg", "group_f6.jpg", "group_f7.jpg");
+
+
+    function nextImage(arrImg, imgName, buttonId) {
+
+        var button = document.getElementById(buttonId);
+        var currentImage = parseInt(button.getAttribute('data-current-index'), 10);
+
+        currentImage++;
+        if (currentImage >= arrImg.length) {
+            currentImage = 0;
+        }
+
+        document.images[imgName].src = arrImg[currentImage];
+        button.setAttribute('data-current-index', currentImage.toString());
+
+        return false;
+    }
+
+</script>
+
+<body>
+    <div class="container">
+        <h1> Образцы школьных фотографий</h1>
+        <div class="obshie">
+            <h3>Групповые фотографии одним снимком
+                <br>
+                Cтоимость таких групповых фотографий 380 руб, размер
+                А4 (21х30) см, по умолчанию фотографии ламинируются.
+            </h3>
+        </div>
+        <img src="group_01.jpg" name="picture" width="1528">
+        <br />
+        <div class="center">        <input type="button" id="button1" onclick="return nextImage(locations, 'picture', 'button1')"
+            data-current-index="0" value="Следующее фото" /></div>
+
+        <hr align="middle" size="5" color="red" width="100%">
+        <div class="obshie">
+            <h3>Общие фотографии "виньетки"</h3>
+            <h4>Cтоимость таких фотографий 460 руб, размер А4 (21х30) см, по умолчанию фотографии ламинируются.
+            </h4>
+        </div>
+        <img src="group_4.jpg" name="picture2" width="1528">
+        <br />
+        <div class="center"> <input type="button" id="button2" onclick="return nextImage(locaut, 'picture2', 'button2')"
+            data-current-index="0" value="Следующее фото" /></div>
+        <hr align="middle" size="5" color="red" width="100%">
+        <div class="obshie">
+            <h3>Групповые постановочные коллажи</h3>
+            <h4>Каждый ученик фотографируется отдельно в полный рост, далее все одноклассники собераются
+                на выбранном макете. У каждого ученика на груди есть номерок, который соответствует номеру в
+                в списке класса.
+            </h4>
+            <h4>Cтоимость таких фотографий 570 руб, размер
+                А4 (21х30) см, по умолчанию фотографии ламинируются.
+            </h4>
+        </div>
+        <img src="group_k1.jpg" name="picture3" width="1528">
+        <br />
+        <div class="center"><input type="button" id="button3" onclick="return nextImage(locauts, 'picture3', 'button3')"
+            data-current-index="0" value="Следующее фото" /></div>
+        <hr align="middle" size="5" color="red" width="100%">
+        <div class="obshie">
+            <h3>Школьные портреты печатаются в размерах:</h3>
+            <h4> 10х15 270 руб 15х20 340 руб 21х30 450руб </h4>
+        </div>
+        <img src="group_f1.jpg" name="picture4" width="1080" class="foto">
+        <br />
+        <div class="center"><input type="button" id="button4" onclick="return nextImage(locati, 'picture4', 'button4')"
+                data-current-index="0" value="Следующее фото" /></div>
+    </div>
+</body>
+
+</html>
