@@ -11,12 +11,18 @@
   rel="stylesheet"
   href="css/swiper-bundle.min.css"
 />
-
 <script src="js/swiper-bundle.min.js"></script>
+
+<script src="js/fancybox.umd.js"></script>
+<link
+  rel="stylesheet"
+  href="css/fancybox.css"
+/>
 </head>
 <script type="text/javascript" defer>
 
 document.addEventListener("DOMContentLoaded", function(){
+    
     new Swiper('.swiper', {
   // Optional parameters
   loop: true,
@@ -37,6 +43,9 @@ document.addEventListener("DOMContentLoaded", function(){
 //     el: '.swiper-scrollbar',
 //   },
 });
+Fancybox.bind("[data-fancybox]", {
+  // Your custom options
+});
 });
 
 </script>
@@ -55,13 +64,13 @@ document.addEventListener("DOMContentLoaded", function(){
         <!-- Slider main container -->
         <div class="swiper">
             <!-- Additional required wrapper -->
-            <div class="swiper-wrapper">
+            <div class="swiper-wrapper" >
             <!-- Slides -->
-            <div class="swiper-slide">   <img src="group_01.jpg" name="picture" width="1528"></div>
-            <div class="swiper-slide">   <img src="group_02.jpg" name="picture" width="1528"></div>
-            <div class="swiper-slide">   <img src="group_03.jpg" name="picture" width="1528"></div>
-            <div class="swiper-slide">   <img src="group_04.jpg" name="picture" width="1528"></div>
-            <div class="swiper-slide">   <img src="group_05.jpg" name="picture" width="1528"></div>
+            <div class="swiper-slide">   <a href="group_01.jpg" data-fancybox="gallery"> <img src="group_01.jpg" name="picture" width="1528"></a></div>
+            <div class="swiper-slide">   <a href="group_02.jpg" data-fancybox="gallery"> <img src="group_02.jpg" name="picture" width="1528"></a></div>
+            <div class="swiper-slide">   <a href="group_03.jpg" data-fancybox="gallery"> <img src="group_03.jpg" name="picture" width="1528"></a></div>
+            <div class="swiper-slide">   <a href="group_04.jpg" data-fancybox="gallery"> <img src="group_04.jpg" name="picture" width="1528"></a></div>
+            <div class="swiper-slide">   <a href="group_05.jpg" data-fancybox="gallery"> <img src="group_05.jpg" name="picture" width="1528"></a></div>
             </div>
             <!-- If we need pagination -->
             <div class="swiper-pagination"></div>
@@ -84,12 +93,12 @@ document.addEventListener("DOMContentLoaded", function(){
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
             <!-- Slides -->
-            <div class="swiper-slide">   <img src="group_p1.jpg" name="picture" width="1528"></div>
-            <div class="swiper-slide">   <img src="group_p2.jpg" name="picture" width="1528"></div>
-            <div class="swiper-slide">   <img src="group_p3.jpg" name="picture" width="1528"></div>
-            <div class="swiper-slide">   <img src="group_p4.jpg" name="picture" width="1528"></div>
-            <div class="swiper-slide">   <img src="group_p5.jpg" name="picture" width="1528"></div>
-            <div class="swiper-slide">   <img src="group_p6.jpg" name="picture" width="1528"></div>
+            <div class="swiper-slide">   <a href="group_p1.jpg" data-fancybox="gallery2"><img src="group_p1.jpg" name="picture" width="1528"></a></div>
+            <div class="swiper-slide">   <a href="group_p2.jpg" data-fancybox="gallery2"><img src="group_p2.jpg" name="picture" width="1528"></a></div>
+            <div class="swiper-slide">   <a href="group_p3.jpg" data-fancybox="gallery2"><img src="group_p3.jpg" name="picture" width="1528"></a></div>
+            <div class="swiper-slide">   <a href="group_p4.jpg" data-fancybox="gallery2"><img src="group_p4.jpg" name="picture" width="1528"></a></div>
+            <div class="swiper-slide">   <a href="group_p5.jpg" data-fancybox="gallery2"><img src="group_p5.jpg" name="picture" width="1528"></a></div>
+            <div class="swiper-slide">   <a href="group_p6.jpg" data-fancybox="gallery2"><img src="group_p6.jpg" name="picture" width="1528"></a></div>
             </div>
             <!-- If we need pagination -->
             <div class="swiper-pagination"></div>
@@ -117,11 +126,11 @@ document.addEventListener("DOMContentLoaded", function(){
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
             <!-- Slides -->
-            <div class="swiper-slide">   <img src="group_k1.jpg" name="picture3" width="1528"></div>
-            <div class="swiper-slide">   <img src="group_k2.jpg" name="picture" width="1528"></div>
-            <div class="swiper-slide">   <img src="group_k3.jpg" name="picture" width="1528"></div>
-            <div class="swiper-slide">   <img src="group_k4.jpg" name="picture" width="1528"></div>
-            <div class="swiper-slide">   <img src="group_k5.jpg" name="picture" width="1528"></div>
+            <div class="swiper-slide">   <a href="group_k1.jpg" data-fancybox="gallery3"><img src="group_k1.jpg" name="picture3" width="1528"></a></div>
+            <div class="swiper-slide">   <a href="group_k2.jpg" data-fancybox="gallery3"><img src="group_k2.jpg" name="picture" width="1528"></a></div>
+            <div class="swiper-slide">   <a href="group_k3.jpg" data-fancybox="gallery3"><img src="group_k3.jpg" name="picture" width="1528"></a></div>
+            <div class="swiper-slide">   <a href="group_k4.jpg" data-fancybox="gallery3"><img src="group_k4.jpg" name="picture" width="1528"></a></div>
+            <div class="swiper-slide">   <a href="group_k5.jpg" data-fancybox="gallery3"><img src="group_k5.jpg" name="picture" width="1528"></a></div>
             </div>
             <!-- If we need pagination -->
             <div class="swiper-pagination"></div>
@@ -144,22 +153,9 @@ document.addEventListener("DOMContentLoaded", function(){
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper last">
             <!-- Slides -->
-            <div class="swiper-slide">   <img src="group_f1.jpg" class="vert" name="picture3" ></div>
-            <div class="swiper-slide">   <img src="group_f2.jpg" class="vert"name="picture" ></div>
-            <div class="swiper-slide">   <img src="group_f3.jpg" class="vert" name="picture" ></div>
-            <div class="swiper-slide">   <img src="group_f4.jpg" name="picture" width="1528"></div>
-            <div class="swiper-slide">   <img src="group_f5.jpg" name="picture" width="1528"></div>
-            <div class="swiper-slide">   <img src="group_f6.jpg" name="picture3" width="1528"></div>
-            <div class="swiper-slide">   <img src="group_f7.jpg"  class="vert" name="picture" ></div>
-            <div class="swiper-slide">   <img src="group_f8.jpg"  class="vert" name="picture" ></div>
-            <div class="swiper-slide">   <img src="group_f9.jpg"  class="vert" name="picture" ></div>
-            <div class="swiper-slide">   <img src="group_f10.jpg" class="vert" name="picture" ></div>
-            <div class="swiper-slide">   <img src="group_f11.jpg" class="vert" name="picture3" ></div>
-            <div class="swiper-slide">   <img src="group_f12.jpg" class="vert" name="picture" ></div>
-            <div class="swiper-slide">   <img src="group_f13.jpg" class="vert" name="picture" ></div>
-            <div class="swiper-slide">   <img src="group_f14.jpg" class="vert" name="picture" ></div>
-            <div class="swiper-slide">   <img src="group_f15.jpg" class="vert" name="picture" ></div>
-            <div class="swiper-slide">   <img src="group_f16.jpg" class="vert" name="picture" ></div>
+            <div class="swiper-slide">   <a href="group_f4.jpg" data-fancybox="gallery4"><img src="group_f4.jpg" name="picture" width="1528"></a></div>
+            <div class="swiper-slide">   <a href="group_f5.jpg" data-fancybox="gallery4"><img src="group_f5.jpg" name="picture" width="1528"></a></div>
+            <div class="swiper-slide">   <a href="group_f6.jpg" data-fancybox="gallery4"><img src="group_f6.jpg" name="picture3" width="1528"></a></div>
             </div>
             <!-- If we need pagination -->
             <div class="swiper-pagination"></div>
@@ -172,8 +168,35 @@ document.addEventListener("DOMContentLoaded", function(){
         </div>
         
         <br />
+        <div class="swiper ">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper last">
+            <!-- Slides -->
+            <div class="swiper-slide">   <a href="group_f1.jpg" data-fancybox="gallery5" style="display: flex;  justify-content: center;width: 100%;"><img src="group_f1.jpg" class="vert" name="picture3" ></a></div>
+            <div class="swiper-slide">   <a href="group_f2.jpg" data-fancybox="gallery5" style="display: flex;  justify-content: center;width: 100%;"><img src="group_f2.jpg" class="vert"name="picture" ></a></div>
+            <div class="swiper-slide">   <a href="group_f3.jpg" data-fancybox="gallery5" style="display: flex;  justify-content: center;width: 100%;"><img src="group_f3.jpg" class="vert" name="picture" ></a></div>
+            <div class="swiper-slide">   <a href="group_f7.jpg" data-fancybox="gallery5" style="display: flex;  justify-content: center;width: 100%;"><img src="group_f7.jpg"  class="vert" name="picture" ></a></div>
+            <div class="swiper-slide">   <a href="group_f8.jpg" data-fancybox="gallery5" style="display: flex;  justify-content: center;width: 100%;"><img src="group_f8.jpg"  class="vert" name="picture" ></a></div>
+            <div class="swiper-slide">   <a href="group_f9.jpg" data-fancybox="gallery5" style="display: flex;  justify-content: center;width: 100%;"><img src="group_f9.jpg"  class="vert" name="picture" ></a></div>
+            <div class="swiper-slide">   <a href="group_f10.jpg" data-fancybox="gallery5" style="display: flex;  justify-content: center;width: 100%;"><img src="group_f10.jpg" class="vert" name="picture" ></a></div>
+            <div class="swiper-slide">   <a href="group_f11.jpg" data-fancybox="gallery5" style="display: flex;  justify-content: center;width: 100%;"><img src="group_f11.jpg" class="vert" name="picture3" ></a></div>
+            <div class="swiper-slide">   <a href="group_f12.jpg" data-fancybox="gallery5" style="display: flex;  justify-content: center;width: 100%;"><img src="group_f12.jpg" class="vert" name="picture" ></a></div>
+            <div class="swiper-slide">   <a href="group_f13.jpg" data-fancybox="gallery5" style="display: flex;  justify-content: center;width: 100%;"><img src="group_f13.jpg" class="vert" name="picture" ></a></div>
+            <div class="swiper-slide">   <a href="group_f14.jpg" data-fancybox="gallery5" style="display: flex;  justify-content: center;width: 100%;"><img src="group_f14.jpg" class="vert" name="picture" ></a></div>
+            <div class="swiper-slide">   <a href="group_f15.jpg" data-fancybox="gallery5" style="display: flex;  justify-content: center;width: 100%;"><img src="group_f15.jpg" class="vert" name="picture" ></a></div>
+            <div class="swiper-slide">   <a href="group_f16.jpg" data-fancybox="gallery5" style="display: flex;  justify-content: center;width: 100%;"><img src="group_f16.jpg" class="vert" name="picture" ></a></div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
         
+            <!-- If we need navigation buttons -->
+            
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        
+        </div>
     </div>
+
 </body>
 
 </html>

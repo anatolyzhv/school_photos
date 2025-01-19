@@ -132,10 +132,11 @@ img{
     max-width: 100%;
 }
 img.vert{
-    position: absolute;
+    /* position: absolute;
     max-width: -webkit-fill-available;
+    height: 100px;
     left: 50%;
-    transform: translate(-50%);
+    transform: translate(-50%); */
 }
 @media (max-width: 991px) {
     input {
