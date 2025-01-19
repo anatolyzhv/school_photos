@@ -7,36 +7,43 @@
     <link rel="stylesheet" href="styles.css">
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1">-->
     <title>Школьные фотографии</title>
+    <link
+  rel="stylesheet"
+  href="css/swiper-bundle.min.css"
+/>
+
+<script src="js/swiper-bundle.min.js"></script>
 </head>
-<script type="text/javascript">
-    var locations = new Array("group_01.jpg", "group_02.jpg", "group_03.jpg", "group_04.jpg", "group_05.jpg");
-    var locaut = new Array("group_p1.jpg", "group_p2.jpg", "group_p3.jpg", "group_p4.jpg", "group_p5.jpg", "group_p6.jpg");
-    var locauts = new Array("group_k1.jpg", "group_k2.jpg", "group_k3.jpg", "group_k4.jpg", "group_k5.jpg");
-    var locati = new Array("group_f1.jpg", "group_f2.jpg", "group_f3.jpg", "group_f4.jpg", "group_f5.jpg", "group_f6.jpg", "group_f7.jpg", 
-    "group_f8.jpg", "group_f9.jpg", "group_f10.jpg", "group_f11.jpg", "group_f12.jpg", "group_f13.jpg", "group_f14.jpg", "group_f15.jpg", "group_f16.jpg");
+<script type="text/javascript" defer>
 
+document.addEventListener("DOMContentLoaded", function(){
+    new Swiper('.swiper', {
+  // Optional parameters
+  loop: true,
 
-    function nextImage(arrImg, imgName, buttonId) {
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
 
-        var button = document.getElementById(buttonId);
-        var currentImage = parseInt(button.getAttribute('data-current-index'), 10);
-
-        currentImage++;
-        if (currentImage >= arrImg.length) {
-            currentImage = 0;
-        }
-
-        document.images[imgName].src = arrImg[currentImage];
-        button.setAttribute('data-current-index', currentImage.toString());
-
-        return false;
-    }
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  spaceBetween:'30px'
+  // And if we need scrollbar
+//   scrollbar: {
+//     el: '.swiper-scrollbar',
+//   },
+});
+});
 
 </script>
-
 <body style="margin: 0;">
     <div class="container">
         <h1 style="margin: 0; padding: 10px 0;"> Образцы школьных фотографий</h1>
+   
         <div class="obshie">
             <h3>Групповые фотографии одним снимком
                 <br>
@@ -44,21 +51,58 @@
                 А4 (21х30) см, по умолчанию фотографии ламинируются.
             </h3>
         </div>
-        <img src="group_01.jpg" name="picture" width="1528">
+     
+        <!-- Slider main container -->
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">   <img src="group_01.jpg" name="picture" width="1528"></div>
+            <div class="swiper-slide">   <img src="group_02.jpg" name="picture" width="1528"></div>
+            <div class="swiper-slide">   <img src="group_03.jpg" name="picture" width="1528"></div>
+            <div class="swiper-slide">   <img src="group_04.jpg" name="picture" width="1528"></div>
+            <div class="swiper-slide">   <img src="group_05.jpg" name="picture" width="1528"></div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+        
+            <!-- If we need navigation buttons -->
+            
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        
+        </div>
         <br />
-        <div class="center">        <input type="button" id="button1" onclick="return nextImage(locations, 'picture', 'button1')"
-            data-current-index="0" value="Следующее фото" /></div>
-
+        
         <hr align="middle" size="5" color="red" width="100%">
         <div class="obshie">
             <h3>Общие фотографии "виньетки"</h3>
             <h4>Cтоимость таких фотографий 500 руб, размер А4 (21х30) см, по умолчанию фотографии ламинируются.
             </h4>
         </div>
-        <img src="group_p1.jpg" name="picture2" width="1528">
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">   <img src="group_p1.jpg" name="picture" width="1528"></div>
+            <div class="swiper-slide">   <img src="group_p2.jpg" name="picture" width="1528"></div>
+            <div class="swiper-slide">   <img src="group_p3.jpg" name="picture" width="1528"></div>
+            <div class="swiper-slide">   <img src="group_p4.jpg" name="picture" width="1528"></div>
+            <div class="swiper-slide">   <img src="group_p5.jpg" name="picture" width="1528"></div>
+            <div class="swiper-slide">   <img src="group_p6.jpg" name="picture" width="1528"></div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+        
+            <!-- If we need navigation buttons -->
+            
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        
+        </div>
+       
         <br />
-        <div class="center"> <input type="button" id="button2" onclick="return nextImage(locaut, 'picture2', 'button2')"
-            data-current-index="0" value="Следующее фото" /></div>
+
         <hr align="middle" size="5" color="red" width="100%">
         <div class="obshie">
             <h3>Групповые постановочные коллажи</h3>
@@ -69,19 +113,66 @@
                 А4 (21х30) см, по умолчанию фотографии ламинируются.
             </h4>
         </div>
-        <img src="group_k1.jpg" name="picture3" width="1528">
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">   <img src="group_k1.jpg" name="picture3" width="1528"></div>
+            <div class="swiper-slide">   <img src="group_k2.jpg" name="picture" width="1528"></div>
+            <div class="swiper-slide">   <img src="group_k3.jpg" name="picture" width="1528"></div>
+            <div class="swiper-slide">   <img src="group_k4.jpg" name="picture" width="1528"></div>
+            <div class="swiper-slide">   <img src="group_k5.jpg" name="picture" width="1528"></div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+        
+            <!-- If we need navigation buttons -->
+            
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        
+        </div>
+       
         <br />
-        <div class="center"><input type="button" id="button3" onclick="return nextImage(locauts, 'picture3', 'button3')"
-            data-current-index="0" value="Следующее фото" /></div>
+       
         <hr align="middle" size="5" color="red" width="100%">
         <div class="obshie">
             <h3>Школьные портреты печатаются в размерах:</h3>
             <h4>  10х15 300 руб; 15х20 так же 300 руб; 21х30 450руб.  </h4>
         </div>
-        <img src="group_f1.jpg" name="picture4" width="1080" class="foto">
+        <div class="swiper ">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper last">
+            <!-- Slides -->
+            <div class="swiper-slide">   <img src="group_f1.jpg" class="vert" name="picture3" ></div>
+            <div class="swiper-slide">   <img src="group_f2.jpg" class="vert"name="picture" ></div>
+            <div class="swiper-slide">   <img src="group_f3.jpg" class="vert" name="picture" ></div>
+            <div class="swiper-slide">   <img src="group_f4.jpg" name="picture" width="1528"></div>
+            <div class="swiper-slide">   <img src="group_f5.jpg" name="picture" width="1528"></div>
+            <div class="swiper-slide">   <img src="group_f6.jpg" name="picture3" width="1528"></div>
+            <div class="swiper-slide">   <img src="group_f7.jpg"  class="vert" name="picture" ></div>
+            <div class="swiper-slide">   <img src="group_f8.jpg"  class="vert" name="picture" ></div>
+            <div class="swiper-slide">   <img src="group_f9.jpg"  class="vert" name="picture" ></div>
+            <div class="swiper-slide">   <img src="group_f10.jpg" class="vert" name="picture" ></div>
+            <div class="swiper-slide">   <img src="group_f11.jpg" class="vert" name="picture3" ></div>
+            <div class="swiper-slide">   <img src="group_f12.jpg" class="vert" name="picture" ></div>
+            <div class="swiper-slide">   <img src="group_f13.jpg" class="vert" name="picture" ></div>
+            <div class="swiper-slide">   <img src="group_f14.jpg" class="vert" name="picture" ></div>
+            <div class="swiper-slide">   <img src="group_f15.jpg" class="vert" name="picture" ></div>
+            <div class="swiper-slide">   <img src="group_f16.jpg" class="vert" name="picture" ></div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+        
+            <!-- If we need navigation buttons -->
+            
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        
+        </div>
+        
         <br />
-        <div class="center"><input type="button" id="button4" onclick="return nextImage(locati, 'picture4', 'button4')"
-                data-current-index="0" value="Следующее фото" /></div>
+        
     </div>
 </body>
 
